@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import fi.jyu.mit.fxgui.RadioButtonChooser?>
+<?import fi.jyu.mit.fxgui.ScrollBorder?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxAanestysRB.AanestysGUIController">
+   <top>
+      <Label text="Oletko?" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+         <padding>
+            <Insets left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </Label>
+   </top>
+   <bottom>
+      <Button defaultButton="true" mnemonicParsing="false" onAction="#handleAanesta" text="äänestä" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="20.0" />
+         </BorderPane.margin>
+      </Button>
+   </bottom>
+   <center>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="labelValittu" alignment="CENTER" maxWidth="1000.0" text="Valittu: Kyllä" />
+            <ScrollBorder>
+               <children>
+      			<RadioButtonChooser fx:id="valinta" rivit="_Mies&#10;_Nainen&#10;_Tyttö&#10;_Poika&#10;" />
+               </children>
+            </ScrollBorder>
+         </children>
+         <BorderPane.margin>
+            <Insets top="20.0" />
+         </BorderPane.margin>
+      </VBox>
+   </center>
+</BorderPane>
